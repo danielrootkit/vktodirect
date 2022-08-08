@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vk to Direct download link generator</title>
+    <style>
+      body {
+        background-color: #111113;
+      }
+      #container {
+        background-color: #202124;
+        border-radius: 15px;
+      }
+      .elems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+      }
+      input {
+        width: 100%;
+        font-size: 14px;
+        height: 30px;
+        outline: none;
+        border-radius: 10px;
+        background-color: #303134;
+        color: #f5f5f5;
+        padding-left: 10px;
+        border: none;
+      }
+      label {
+        margin: 5px;
+        color: #7c7c7c;
+      }
+      #paste-btn {
+        position: absolute;
+        top: 0;
+        border-radius: 10px;
+        margin-top: 31px;
+        right: 36px;
+        z-index: 2;
+        border: none;
+        top: 2px;
+        height: 30px;
+        cursor: pointer;
+        color: white;
+        background-color: #1e90ff;
+        transform: translateX(2px);
+      }
+      #goto-btn {
+        position: absolute;
+        top: 0;
+        border-radius: 10px;
+        margin-top: 114px;
+        right: 36px;
+        z-index: 2;
+        border: none;
+        top: 2px;
+        height: 28px;
+        cursor: pointer;
+        color: white;
+        background-color: #1e90ff;
+        transform: translateX(2px);
+        padding-top: 3px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      /* #download-btn {
+      position: absolute;
+      top: 0;
+      border-radius: 10px;
+      margin-top: 114px;
+      right: 36px;
+      z-index: 2;
+      border: none;
+      top: 2px;
+      height: 28px;
+      cursor: pointer;
+      color: white;
+      background-color: #5a1eff;
+      transform: translateX(2px);
+      padding-top: 3px;
+      padding-left: 8px;
+      padding-right: 8px;
+    } */
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="elems" id="daxab">
+        <label for="daxab-input">Dft</label>
+        <input
+          placeholder="https://daftsex.com/watch/-201904425_456246898"
+          type="text"
+          id="daxab-input"
+          onblur="urlconv()"
+        />
+        <button id="paste-btn" onclick="pastefromclip()">paste</button>
+      </div>
+      <div class="elems" id="vk">
+        <label for="vk-input">Vk</label>
+        <input
+          placeholder="https://vk.com/video-201904425_456246898#quality=480p"
+          type="text"
+          id="vk-input"
+        />
+        <a id="goto-btn" target="_blank">goto</a>
+      </div>
+      <div id="download"></div>
+    </div>
+    <script>
+      function urlconv() {
+        let daxab = document.getElementById("daxab-input").value;
+        let x = daxab.split("watch/");
+        document.getElementById(
+          "vk-input"
+        ).value = `https://vk.com/video${x[1]}#quality=480p`;
+        document.getElementById(
+          "goto-btn"
+        ).href = `https://vk.com/video${x[1]}#quality=480p`;
+
+        document.getElementById(
+          "download"
+        ).innerHTML = `<a id="download-btn" href="https://videograb.net/vk-video-downloader/#url=https://vk.com/video${x[1]}#quality=480p" target="_blank">download</a>`;
+      }
+
+      async function pastefromclip(input) {
+        const text = await navigator.clipboard.readText();
+        document.getElementById("daxab-input").value = text;
+        urlconv();
+      }
+    </script>
+  </body>
+</html>
