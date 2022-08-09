@@ -1,0 +1,79 @@
+      body {
+        background-color: #111113;
+      }
+      #container {
+        background-color: #202124;
+        border-radius: 15px;
+      }
+      .elems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+      }
+      input {
+        width: 100%;
+        font-size: 14px;
+        height: 30px;
+        outline: none;
+        border-radius: 10px;
+        background-color: #303134;
+        color: #f5f5f5;
+        padding-left: 10px;
+        border: none;
+      }
+      label {
+        margin: 5px;
+        color: #7c7c7c;
+      }
+      #paste-btn {
+        position: absolute;
+        top: 0;
+        border-radius: 10px;
+        margin-top: 31px;
+        right: 36px;
+        z-index: 2;
+        border: none;
+        top: 2px;
+        height: 30px;
+        cursor: pointer;
+        color: white;
+        background-color: #1e90ff;
+        transform: translateX(2px);
+      }
+      #goto-btn {
+        position: absolute;
+        top: 0;
+        border-radius: 10px;
+        margin-top: 114px;
+        right: 36px;
+        z-index: 2;
+        border: none;
+        top: 2px;
+        height: 28px;
+        cursor: pointer;
+        color: white;
+        background-color: #1e90ff;
+        transform: translateX(2px);
+        padding-top: 3px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      /* #download-btn {
+      position: absolute;
+      top: 0;
+      border-radius: 10px;
+      margin-top: 114px;
+      right: 36px;
+      z-index: 2;
+      border: none;
+      top: 2px;
+      height: 28px;
+      cursor: pointer;
+      color: white;
+      background-color: #5a1eff;
+      transform: translateX(2px);
+      padding-top: 3px;
+      padding-left: 8px;
+      padding-right: 8px;
+    } */
